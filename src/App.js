@@ -9,6 +9,7 @@ import './App.css';
 import Header from './components/headerComponent/header.js';
 import Home from './components/pages/homePage.js';
 import QuestionPage from './components/pages/questionPage.js';
+import DB from './components/DB.js';
 
 
 class App extends Component {

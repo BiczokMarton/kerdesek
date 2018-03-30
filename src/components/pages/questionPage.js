@@ -4,11 +4,11 @@ import React, { Component } from 'react';
 class QuestionPage extends Component {
   render() {
     return (
-      <header>
+      <div>
         <div className="home">
         	Itt egy kérdés
         </div>
-      </header>
+      </div>
 
     );
   }
