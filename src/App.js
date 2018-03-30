@@ -12,15 +12,19 @@ import QuestionPage from './components/pages/questionPage.js';
 import DB from './components/DB.js';
 
 
+
 class App extends Component {
+
+  
   render() {
     return (
+
       <Router>
       <div className="App">
         <Header/>
           <Route exact path='/'component={Home} />
           <Route exact path='/QuestionPage'component={QuestionPage} /> 
-        
+
       </div>
       </Router>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import DB from './components/DB.js';
 
 class QuestionPage extends Component {
   render() {

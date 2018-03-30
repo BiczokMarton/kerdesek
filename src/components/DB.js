@@ -8,6 +8,9 @@ class DB extends Component {
                  answer:["asswer1"]
                 }];
   }
+
+
+
 }
 
-export default DB;
+export default (new DB);
