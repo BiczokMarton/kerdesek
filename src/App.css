@@ -7,3 +7,27 @@ header {
 .homeLink{
   color: white;
 }
+
+.panel {
+  position: relative;
+  margin: 20px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.80);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.80);
+  }
+
+  .panel-body {
+  padding: 15px;
+}
+.numOfAnsw{
+  position: absolute;
+  right :10px;
+
+}
+
+.img-responsive{
+  max-width: auto;
+  max-height: 70px;
+}

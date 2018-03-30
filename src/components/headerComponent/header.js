@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import homeLogo from '../../home.jpg';
 
 import {
         Link
@@ -10,7 +11,7 @@ class Header extends Component {
     return (
       <header>
         <div className="homeLink">
-        	<Link to="/">Home</Link> 
+        	<Link to="/"><img className="img-responsive" src={homeLogo}/></Link> 
         </div>
       </header>
 
