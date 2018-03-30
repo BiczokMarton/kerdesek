@@ -5,7 +5,7 @@ class DB extends Component {
   constructor(){
     super()
     this.DB = [{text:"Test1",
-                 answer:["asswer1"]
+                 answers:["asswer1","answer2"]
                 }];
   }
 
