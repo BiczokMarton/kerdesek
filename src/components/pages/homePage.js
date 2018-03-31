@@ -27,7 +27,7 @@ class Home extends Component {
   addQuestion(){
   	
   	var temp = new Object();
-		temp.text = this.state.newQuestionBody;;
+		temp.text = this.state.newQuestionBody;
 		temp.answers =[];
 
 	DB.DB.push(temp);
@@ -48,15 +48,14 @@ class Home extends Component {
 							<div className="panel-body">
 								<Link to={"/QuestionPage/"+i}>{text.text}</Link> 
 
-        							<div className="numOfAnsw">{text.answers.length} válasz a kérdésre<br/>
-        								<button className="btn btn-success post-editor-button" >Töröl</button>
+        							<div className="numOfAnsw">{text.answers.length} válasz a kérdésre
+        								
         							</div>
 		
 									
 							</div>
 						</div>
         				)
-
         		})
         	}
         	<textarea className="form-control post-editor-input" value={this.state.newQuestionBody} onChange={this.handleQuestionEditprInputChange}/>

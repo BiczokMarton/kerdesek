@@ -30,8 +30,14 @@ header {
   max-height: 70px;
 }
 
+.delete-question-button{
+  position: absolute;
+  right :20px;
+  margin: 20px;
+}
 
-.post-editor-button{
+
+.post-editor-input{
   float: right;
   
 }
