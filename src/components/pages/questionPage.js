@@ -6,7 +6,31 @@ class QuestionPage extends Component {
     return (
       <div>
         <div className="home">
-        	Itt egy kérdés
+        	        	{
+        		DB.DB.map((quest,i)=>{
+              if(i==[this.props.match.params.Id]){
+        			return(
+                <div>
+                <h2>{quest.text}</h2>
+        				{quest.answers.map((answ,j)=>{
+                  return(
+                    <div className="panel panel-default post-editor">
+                      <div className="panel-body">
+                          <div key={j}>{answ}  </div>
+                      </div>
+                     </div>
+
+                          )
+
+                      }
+								    )
+                  }
+        						
+            </div>
+        				)}
+
+        		})
+        	}
         </div>
       </div>
 

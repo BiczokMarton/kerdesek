@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DB from './../DB.js';
 import {
+
         Link
         } from 'react-router-dom';
 
@@ -15,16 +16,18 @@ class Home extends Component {
         			return(
         				<div className="panel panel-default post-editor">
 							<div className="panel-body">
-        						<div key={i}>{text.text}  </div>
-        							<div className="numOfAnsw">{text.answers.length}</div>
-        						
+								<Link to={"/QuestionPage/"+i}>{text.text}</Link> 
+
+        							<div className="numOfAnsw">{text.answers.length} válasz a kérdésre</div>
+		
+									<button className="btn btn-success post-editor-button" >Töröl</button>
 							</div>
 						</div>
         				)
 
         		})
         	}
-        	<Link to="QuestionPage">Itt lesznek a kérdések</Link>
+        	
         	
         </div>
       
