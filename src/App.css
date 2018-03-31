@@ -3,7 +3,9 @@ header {
     background: black;
 }
 
-
+.container{
+    position: relative;
+}
 
 .panel {
   position: relative;
@@ -37,7 +39,7 @@ header {
 }
 
 
-.post-editor-input{
+.post-editor-button{
   float: right;
   
 }
