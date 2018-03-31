@@ -4,9 +4,6 @@ header {
 }
 
 
-.homeLink{
-  color: white;
-}
 
 .panel {
   position: relative;
@@ -31,4 +28,14 @@ header {
 .img-responsive{
   max-width: auto;
   max-height: 70px;
+}
+
+
+.post-editor-button{
+  float: right;
+  
+}
+
+.new-post-button{
+margin: 20px;
 }

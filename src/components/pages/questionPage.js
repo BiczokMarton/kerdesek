@@ -5,7 +5,7 @@ class QuestionPage extends Component {
   render() {
     return (
       <div>
-        <div className="home">
+        <div className="container">
         	        	{
         		DB.DB.map((quest,i)=>{
               if(i==[this.props.match.params.Id]){
