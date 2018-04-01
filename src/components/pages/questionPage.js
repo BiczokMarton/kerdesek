@@ -14,9 +14,17 @@ class QuestionPage extends Component {
     this.handleAnswerEditprInputChange = this.handleAnswerEditprInputChange.bind(this);
     this.removeQuestion = this.removeQuestion.bind(this);
     this.removeAnswer = this.removeAnswer.bind(this);
+    this.handleEditAnswerEditprInputChange = this.handleEditAnswerEditprInputChange.bind(this)
     this.state = {
-    newAnswerBody:'',    
+    newAnswerBody:'',   
+    editedAnswerBody:'' 
     }  
+  }
+
+  handleEditAnswerEditprInputChange(ev){
+    this.setState({
+    editedAnswerBody: ev.target.value  
+    })
   }
 
   handleAnswerEditprInputChange(ev){
@@ -41,6 +49,13 @@ class QuestionPage extends Component {
    DB.DB[i].answers.splice(j, 1);
   }
 
+  editAnswer(i,j) {
+    DB.DB[i].answers[j]=this.state.editedAnswerBody;
+    this.setState({
+    editedAnswerBody: ''
+    })
+  }
+
   render() {
     return (
 
@@ -52,10 +67,36 @@ class QuestionPage extends Component {
                 <div className="container">
                 <h2>{quest.text}</h2>
         				{quest.answers.map((answ,j)=>{
+                                      var id = i;
+                    var jd = j;
                   return(
                     <div className="panel panel-default post-editor">
                       <div className="panel-body">
-                          <div key={j}>{answ}  <Link to='#'><button className="btn btn-danger delete-answer-button" onClick={()=>this.removeAnswer(i,j)}>Válasz törlése</button></Link></div>
+                          <div key={j}>{answ}  
+                             <button type="button" className="btn btn-info edit-answer-button" data-toggle="modal" data-target="#myModal">Válasz módosítása</button>
+{/*--------------------Felugró modal----------------------------------------*/}
+  <div className="modal fade" id="myModal" role="dialog">
+    <div className="modal-dialog">
+      <div className="modal-content">
+        <div className="modal-header">
+          
+          <h4 className="modal-title">Válasz módosítása</h4>
+          <button type="button" className="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div className="modal-body">
+          <textarea className="form-control answer-editor-input" value={this.state.editedAnswerBody} onChange={this.handleEditAnswerEditprInputChange}/>
+        </div>
+        <div className="modal-footer">
+          <button className="btn btn-success new-post-button"  data-dismiss="modal" onClick={()=>this.editAnswer(id,jd)}>Mentés</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{/*--------------------Felugró modal bezár----------------------------------------*/}
+
+                            <Link to='#'><button className="btn btn-danger delete-answer-button" onClick={()=>this.removeAnswer(i,j)}>Válasz törlése</button></Link>
+                          </div>
 
                       </div>
                      </div>
