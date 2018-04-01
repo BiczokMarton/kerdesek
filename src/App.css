@@ -38,6 +38,11 @@ header {
   margin: 20px;
 }
 
+.delete-answer-button{
+  position: absolute;
+  right :20px;
+}
+
 
 .post-editor-button{
   float: right;

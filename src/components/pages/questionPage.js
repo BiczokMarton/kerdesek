@@ -13,6 +13,7 @@ class QuestionPage extends Component {
     this.addAnswer = this.addAnswer.bind(this);
     this.handleAnswerEditprInputChange = this.handleAnswerEditprInputChange.bind(this);
     this.removeQuestion = this.removeQuestion.bind(this);
+    this.removeAnswer = this.removeAnswer.bind(this);
     this.state = {
     newAnswerBody:'',    
     }  
@@ -30,13 +31,14 @@ class QuestionPage extends Component {
   }
 
   addAnswer(){
-    
-
-  DB.DB[this.props.match.params.Id].answers.push(this.state.newAnswerBody);
-  this.setState({
+    DB.DB[this.props.match.params.Id].answers.push(this.state.newAnswerBody);
+    this.setState({
     newAnswerBody: ''
-  })
+    })
+  }
 
+  removeAnswer(i,j) {
+   DB.DB[i].answers.splice(j, 1);
   }
 
   render() {
@@ -53,7 +55,8 @@ class QuestionPage extends Component {
                   return(
                     <div className="panel panel-default post-editor">
                       <div className="panel-body">
-                          <div key={j}>{answ}  </div>
+                          <div key={j}>{answ}  <Link to='#'><button className="btn btn-danger delete-answer-button" onClick={()=>this.removeAnswer(i,j)}>Válasz törlése</button></Link></div>
+
                       </div>
                      </div>
 
