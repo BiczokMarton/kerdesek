@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 class DB extends Component {
   constructor(){
     super()
-    this.DB = [{text:"Megkapom az állást?",
-                 answers:["Meg bizony!","Megám hawer"]
+    this.DB = [{text:"Mi az élet értelme?",
+                 answers:["42","Nem tudom, de kösz a halakat!"]
                 },
 
-                {text:"Test2",
-                 answers:["asswer1432","answer2222","harmadik"]
+                {text:"Legyen e második tesztkérdés?",
+                 answers:["Legyen","Ártani nem árthat","Talán még több válasz sem okoz különösebb gondot"]
                 }
                 ];
   }

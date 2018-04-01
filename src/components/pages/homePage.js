@@ -46,11 +46,9 @@ class Home extends Component {
         			return(
         				<div className="panel panel-default post-editor">
 							<div className="panel-body">
-								<Link to={"/QuestionPage/"+i}>{text.text}</Link> 
+								<h4><Link to={"/QuestionPage/"+i}>{text.text}</Link></h4> <br/>
 
-        							<div className="numOfAnsw">{text.answers.length} válasz a kérdésre
-        								
-        							</div>
+        							<div className="numOfAnsw">{text.answers.length} válasz a kérdésre</div>
 		
 									
 							</div>

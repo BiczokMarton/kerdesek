@@ -5,6 +5,7 @@ header {
 
 .container{
     position: relative;
+    overflow-wrap: break-word;
 }
 
 .panel {
@@ -19,6 +20,7 @@ header {
 
   .panel-body {
   padding: 15px;
+  overflow-wrap: break-word;
 }
 .numOfAnsw{
   position: absolute;
@@ -32,10 +34,9 @@ header {
   max-height: 70px;
 }
 
-.delete-question-button{
-  position: absolute;
-  right :20px;
-  margin: 20px;
+.questionEditButtons{
+  text-align: center;
+
 }
 
 .delete-answer-button{
@@ -50,5 +51,12 @@ header {
 }
 
 .new-post-button{
-margin: 20px;
+  margin:20px;
+
+}
+.edit-question-button{
+margin:20px;
+}
+.delete-question-button{
+ margin:20px;
 }
