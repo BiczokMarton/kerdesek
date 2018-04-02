@@ -11,7 +11,7 @@ class Header extends Component {
     return (
       <header>
         <div className="homeLink">
-        	<Link to="/"><img className="img-responsive" src={homeLogo}/></Link> 
+        	<Link to="/"><img className="img-responsive" src={homeLogo} /></Link> 
         </div>
       </header>
 

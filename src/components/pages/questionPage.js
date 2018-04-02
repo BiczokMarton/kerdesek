@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DB from '../DB.js';
-import deleteIcon from '../../delete.png'
 import {
 
         Link
